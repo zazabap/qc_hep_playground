@@ -48,6 +48,11 @@ def example():
   ax[1].set_title('Test')
   ax[1].scatter(X_test[:,0], X_test[:,1], marker='v', c = matplotlib.cm.coolwarm(np.array(y_test, dtype=np.float32)))
   print("Let's first see our training and testing set:")
+  bar_format_string = '{l_bar}{bar}|[{elapsed}<{remaining}, ' '{rate_fmt}{postfix}]'
+  pbar = tqdm(total=100, bar_format=bar_format_string)
+  pbar.close()
+  clear_output()
+
 
 
 # https://qml.baidu.com/tutorials/
